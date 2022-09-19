@@ -1,0 +1,237 @@
+body{
+    font-family: 'Pangolin', cursive;
+    background: linear-gradient(to left, #9c71ec,#cd60ec, #1565c0e1);
+    
+}
+
+#todo-title-div{
+    margin: 0 auto;
+   padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(11, 11, 11); */
+    /* box-shadow: 0 0 5px #000; */
+}
+
+@keyframes shine{
+    from{
+        background-position: center 0;
+    } to {
+        background-position: center 200%;
+    }
+}
+
+#todo-title{
+    
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Pattaya', sans-serif;
+    font-weight:bolder;
+    letter-spacing: 0.2vw;
+    color: white;
+    background: url(./bg1.png);
+    background-size: auto 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6s linear infinite;
+}
+.wrapper{
+    background: url(https://cdn.pixabay.com/photo/2020/08/01/14/56/edge-5455565_960_720.png);
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 8vh auto;
+    height: 85vh;
+    
+    width: fit-content;
+    width: 40vw;
+    /* overflow:auto; */
+    background-color: rgb(11, 11, 11);
+    background-size: auto 100%;
+    border-radius: 20px;
+    
+}
+.filter-todo{
+    background-color: bisque;
+    cursor: pointer;
+    text-align: center;
+}
+
+#todo-input:focus{
+    background: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
+    border: none;
+    box-shadow: none;
+}
+.linear-gradient{
+    background: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d);
+}
+.input-group{
+    width:95%;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.filter-todo{
+border-radius: 0 8px 8px 0;
+}
+.input-group-text{
+    border-radius: 8px 0 0 8px;
+}
+
+#error,#editError{
+    color: red;
+    visibility: hidden;
+    margin-left: 28px;
+
+}
+#todoDiv{ 
+    color: #000;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px;
+    list-style-type: none;
+    background-color: #e8b0f5;
+    padding: 3px 8px;
+    border-radius: 8px;
+    gap: 3px;
+    transition: all 0.5s ease-in-out;
+}
+#todoLI{
+    flex: 1;
+    margin-left: 10px;
+}
+.remove-task-btn{
+    background-color: rgb(243, 108, 108);
+    color: rgb(6, 2, 2);
+}
+.task-completed-btn{
+    background:rgb(112, 225, 112);
+    color: rgb(6, 2, 2);
+    
+}
+.bi-trash-fill, .bi-check2-square, .bi-pencil-fill{
+    pointer-events: none;
+}
+.edit-Content-btn{
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-weight: bolder;
+}
+.text-decoration-line-through{
+    color: red;
+}
+.cssRemove{
+    opacity: 0;
+}
+#label-date{
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.boxAddTodo{
+    display: flex;
+    
+
+}
+.boxDateTime{
+    display: flex;
+    width: min-content;
+    /* gap: 8px; */
+
+}
+#todo-btn{
+    background-color: #8643f3;
+    color:aliceblue;
+    box-shadow:  0 0 5px black;
+}
+.count-down {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+     align-items: center;
+}
+
+.box-day,
+.box-hour,        
+.box-minute,
+.box-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+h3.beach{
+    display: flex;
+    justify-content: center;
+    transform: translateY(150px);
+    color:rgb(38, 120, 252);
+}  
+#uncompleteTasksLeft{
+    color: rgb(224, 220, 214);
+    
+    background: none;
+    border: none;
+}  
+.boxDeadline{
+    display: flex;
+}   
+.boxFilterBtn{
+    display: flex;
+}
+
+
+
+
+@media (max-width: 576px) {
+    .input-group{
+        width: 100%;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container{
+        margin: 0 auto;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    body{
+        background: none;
+    }
+    .boxDateTime{
+        flex-direction: column;
+    }
+    .count-down{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .boxDateTime{
+     gap: 8px; 
+    }
+    .boxDeadline{
+        width: 100%;
+    }
+    .boxAddTodo{
+        width: 100%;
+    }
+    .boxFilterBtn{
+        margin: 0 auto;
+    }
+    #uncompleteTasksLeft{
+        margin: 0 auto; 
+    }
+}
